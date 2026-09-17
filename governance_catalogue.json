@@ -1,0 +1,202 @@
+{
+  "assets": [
+    {
+      "asset_id": "AST-DDC5B24112",
+      "asset_name": "budgets.csv",
+      "asset_type": "SOURCE_FILE",
+      "source_system": "BUDGETS",
+      "owner": "Procurement Data Team",
+      "row_count": 0,
+      "upstream_assets": "",
+      "transformation": "Raw ingest - no transformation applied",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-B23B1903E2",
+      "asset_name": "contracts.csv",
+      "asset_type": "SOURCE_FILE",
+      "source_system": "CONTRACTS",
+      "owner": "Procurement Data Team",
+      "row_count": 0,
+      "upstream_assets": "",
+      "transformation": "Raw ingest - no transformation applied",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-FD77DAE32B",
+      "asset_name": "requisitions.csv",
+      "asset_type": "SOURCE_FILE",
+      "source_system": "REQUISITIONS",
+      "owner": "Procurement Data Team",
+      "row_count": 0,
+      "upstream_assets": "",
+      "transformation": "Raw ingest - no transformation applied",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-1A7A9D9536",
+      "asset_name": "spend_corporate_card.csv",
+      "asset_type": "SOURCE_FILE",
+      "source_system": "",
+      "owner": "Procurement Data Team",
+      "row_count": 0,
+      "upstream_assets": "",
+      "transformation": "",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-A2F29D6029",
+      "asset_name": "spend_erp_export.csv",
+      "asset_type": "SOURCE_FILE",
+      "source_system": "",
+      "owner": "Procurement Data Team",
+      "row_count": 0,
+      "upstream_assets": "",
+      "transformation": "",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-0456A243F1",
+      "asset_name": "spend_invoice_system.csv",
+      "asset_type": "SOURCE_FILE",
+      "source_system": "",
+      "owner": "Procurement Data Team",
+      "row_count": 0,
+      "upstream_assets": "",
+      "transformation": "",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-8DCCE07867",
+      "asset_name": "suppliers.csv",
+      "asset_type": "SOURCE_FILE",
+      "source_system": "SUPPLIERS",
+      "owner": "Procurement Data Team",
+      "row_count": 0,
+      "upstream_assets": "",
+      "transformation": "Raw ingest - no transformation applied",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-C07611146D",
+      "asset_name": "spend_transactions",
+      "asset_type": "TABLE",
+      "source_system": "ProcureSmart DB",
+      "owner": "Procurement Data Team",
+      "row_count": 5200,
+      "upstream_assets": "AST-1A7A9D9536,AST-A2F29D6029,AST-0456A243F1",
+      "transformation": "Standardise text fields; coerce and absolutise amounts; normalise supplier names; recompute contract status from contracts table; deduplicate on transaction_id; conform to unified spend schema",
+      "classification": "CONFIDENTIAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-70276B8D05",
+      "asset_name": "suppliers",
+      "asset_type": "TABLE",
+      "source_system": "ProcureSmart DB",
+      "owner": "Procurement Data Team",
+      "row_count": 28,
+      "upstream_assets": "AST-DDC5B24112",
+      "transformation": "Supplier name normalisation for duplicate detection",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-80CFF89574",
+      "asset_name": "contracts",
+      "asset_type": "TABLE",
+      "source_system": "ProcureSmart DB",
+      "owner": "Procurement Data Team",
+      "row_count": 8,
+      "upstream_assets": "AST-DDC5B24112",
+      "transformation": "Direct load with schema conformance",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-B12BCA5B1C",
+      "asset_name": "requisitions",
+      "asset_type": "TABLE",
+      "source_system": "ProcureSmart DB",
+      "owner": "Procurement Data Team",
+      "row_count": 900,
+      "upstream_assets": "AST-DDC5B24112",
+      "transformation": "Direct load with schema conformance",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-833E96F78C",
+      "asset_name": "department_budgets",
+      "asset_type": "TABLE",
+      "source_system": "ProcureSmart DB",
+      "owner": "Procurement Data Team",
+      "row_count": 8,
+      "upstream_assets": "AST-DDC5B24112",
+      "transformation": "Direct load",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    },
+    {
+      "asset_id": "AST-C2D8EC9A79",
+      "asset_name": "vw_category_spend",
+      "asset_type": "DERIVED_VIEW",
+      "source_system": "",
+      "owner": "Procurement Data Team",
+      "row_count": 5200,
+      "upstream_assets": "AST-C07611146D,AST-70276B8D05,AST-80CFF89574",
+      "transformation": "Aggregation of spend by category, supplier and contract status",
+      "classification": "INTERNAL",
+      "registered_at": "2026-09-16T11:55:50"
+    }
+  ],
+  "lineage_edges": [
+    {
+      "from": "AST-1A7A9D9536",
+      "to": "AST-C07611146D"
+    },
+    {
+      "from": "AST-A2F29D6029",
+      "to": "AST-C07611146D"
+    },
+    {
+      "from": "AST-0456A243F1",
+      "to": "AST-C07611146D"
+    },
+    {
+      "from": "AST-DDC5B24112",
+      "to": "AST-70276B8D05"
+    },
+    {
+      "from": "AST-DDC5B24112",
+      "to": "AST-80CFF89574"
+    },
+    {
+      "from": "AST-DDC5B24112",
+      "to": "AST-B12BCA5B1C"
+    },
+    {
+      "from": "AST-DDC5B24112",
+      "to": "AST-833E96F78C"
+    },
+    {
+      "from": "AST-C07611146D",
+      "to": "AST-C2D8EC9A79"
+    },
+    {
+      "from": "AST-70276B8D05",
+      "to": "AST-C2D8EC9A79"
+    },
+    {
+      "from": "AST-80CFF89574",
+      "to": "AST-C2D8EC9A79"
+    }
+  ]
+}

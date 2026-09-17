@@ -1,0 +1,29 @@
+supplier_id,supplier_name,category,is_preferred,onboarded_date,country
+SUP0001,Nexa Technologies Pvt Ltd,IT Hardware,True,2021-08-17,India
+SUP0002,Zenith Computing,IT Hardware,False,2021-02-21,India
+SUP0003,BluePeak Systems,IT Hardware,False,2022-07-18,India
+SUP0004,Arcadia IT Traders,IT Hardware,False,2022-05-17,India
+SUP0005,Cloudspan Software,IT Software & Licences,True,2022-04-03,India
+SUP0006,Vertex Licensing,IT Software & Licences,False,2021-10-13,India
+SUP0007,Meridian Softworks,IT Software & Licences,False,2021-07-29,India
+SUP0008,Orion Office Supplies,Office Supplies,True,2024-01-22,India
+SUP0009,Paperline Traders,Office Supplies,False,2021-06-28,India
+SUP0010,Kanban Stationers,Office Supplies,False,2024-04-24,India
+SUP0011,Sterling Advisory,Professional Services,True,2023-05-15,India
+SUP0012,Cobalt Consulting,Professional Services,False,2021-03-07,India
+SUP0013,Adept Partners,Professional Services,False,2021-03-03,India
+SUP0014,Skyroute Travel,Travel,True,2021-07-11,India
+SUP0015,Voyager Corporate Travel,Travel,False,2022-03-24,India
+SUP0016,Prime Facility Care,Facilities Maintenance,True,2022-04-22,India
+SUP0017,GreenEdge Services,Facilities Maintenance,False,2023-11-01,India
+SUP0018,Urban Upkeep,Facilities Maintenance,False,2024-05-17,India
+SUP0019,Lumen Creative,Marketing Services,True,2021-02-24,India
+SUP0020,BrightArc Media,Marketing Services,False,2024-02-24,India
+SUP0021,Pulse Marketing Co,Marketing Services,False,2022-02-12,India
+SUP0022,Transcore Logistics,Logistics & Freight,True,2024-01-22,India
+SUP0023,FleetBridge Cargo,Logistics & Freight,False,2023-05-10,India
+SUP0024,Nexa Technologies,IT Hardware,False,2023-08-14,India
+SUP0025,NEXA TECHNOLOGIES PVT. LTD.,IT Hardware,False,2024-04-04,India
+SUP0026,Nexa Tech Pvt Ltd,IT Hardware,False,2024-08-26,India
+SUP0027,Orion Office Supplies Ltd,Office Supplies,False,2023-10-12,India
+SUP0028,ORION OFFICE SUPPLIES,Office Supplies,False,2025-04-08,India
